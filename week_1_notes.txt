@@ -1,0 +1,37 @@
+WEEK 1 NOTES — Jul 2
+
+Q1: What is your home directory path?
+A: /home/mastriax/platform-scripts
+
+Q2: What files are in /etc? (list 3)
+A: ModemManager
+NetworkManager
+PackageKit
+
+Q3: What is your username?
+A: mastriax
+
+Q4: What OS is running?
+A: PRETTY_NAME="Ubuntu 26.04 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+
+Q5: How many files are in your home directory?
+A: 84
+
+Q6: What does chmod 755 mean?
+A: Owner gets rwx (7), group gets r-x (5), others get r-x (5)
+
+Q7: What does chmod 600 mean?
+A: Owner gets rw- (6), group gets nothing (0), others get nothing (0)
+
+Q8: How do you make a file executable by the owner?
+A: chmod 700 filename (or chmod u+x filename)
+
+Q9: How many processes are currently running?
+A: (run: ps aux | wc -l) , I see 228
+
+Q10: How do you see processes in a tree format?
+A: ps -ef --forest
