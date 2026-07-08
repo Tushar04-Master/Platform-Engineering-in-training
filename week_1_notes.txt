@@ -35,3 +35,35 @@ A: (run: ps aux | wc -l) , I see 228
 
 Q10: How do you see processes in a tree format?
 A: ps -ef --forest
+
+DAY 2 — TEXT PROCESSING
+
+Q1: How many HTTP 200 responses are there?
+A: grep -c "200" webserver.log
+
+Q2: How do you find lines that DON'T contain "200"?
+A: grep -v "200" webserver.log
+
+Q3: How do you do case-insensitive search?
+A: grep -i "pattern" filename
+
+Q4: How do you count all error responses (4xx and 5xx)?
+A: grep -E "[45][0-9][0-9]" webserver.log | wc -l
+
+Q5: How do you extract the 1st and 9th fields from a space-delimited file?
+A: cut -d ' ' -f 1,9 filename
+
+Q6: How do you extract the HTTP method (GET, POST, etc.)?
+A: cut -d '"' -f 2 filename | cut -d ' ' -f 1
+
+Q7: How do you count unique values?
+A: cut -d ' ' -f 1 filename | sort | uniq -c
+
+Q8: How do you sum a column with awk?
+A: awk '{sum += $1} END {print sum}' filename
+
+Q9: How do you find lines where field 1 equals a specific value?
+A: awk '$1 == "value" {print}' filename
+
+Q10: How do you find lines where a field matches a regex pattern?
+A: awk '$9 ~ /^2/ {print}' filename  (for example, status codes starting with 2)
